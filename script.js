@@ -5,16 +5,20 @@ let notes = [
   { title: "iluvuuuuuu", message: "M <3" },
   { title: "Ur clothes make me shy...", message: "... would you take them off for me??" },
   { title: "Meow", message: "Mwahhh <3" },
+  { title: "🦀🦐", message: "" },
+  { title: "ilysmmmm", message: "<333" },
+  { title: "Hewooo", message: "how r u??" },
+  { title: "9.5.2025", message: "M + L <3" },
+  { title: "480km", message: "7 days" },
+  { title: "^^", message: "" },
   { title: "Last note", message: "but ill love you forever..." },
 ];
 
-// Separate the last note
+// Always display 6 random + 1 final note
 const lastNote = notes[notes.length - 1];
-const shuffled = notes.slice(0, -1)
-  .sort(() => Math.random() - 0.5); // Shuffle the rest
-
-// Combine them back
+const shuffled = notes.slice(0, -1).sort(() => Math.random() - 0.5).slice(0, 6);
 notes = [...shuffled, lastNote];
+
 
 
 const getRandomShade = () => {
