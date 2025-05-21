@@ -248,7 +248,7 @@ window.addEventListener('scroll', () => {
   // Set a timeout to detect scroll end (no scroll event for 100ms)
   scrollTimeout = setTimeout(() => {
     isScrolling = false;
-  }, 100);
+  }, 10);
 });
 
 // On any touchstart event, if page is still scrolling (momentum), stop it
