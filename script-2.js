@@ -237,3 +237,25 @@ reasons.forEach(reason => {
   li.appendChild(p);
   ol.appendChild(li);
 });
+
+let isScrolling = false;
+let scrollTimeout;
+
+window.addEventListener('scroll', () => {
+  isScrolling = true;
+  clearTimeout(scrollTimeout);
+
+  // Set a timeout to detect scroll end (no scroll event for 100ms)
+  scrollTimeout = setTimeout(() => {
+    isScrolling = false;
+  }, 100);
+});
+
+// On any touchstart event, if page is still scrolling (momentum), stop it
+window.addEventListener('touchstart', () => {
+  if (isScrolling) {
+    // Stop momentum scroll by setting scrollTop to current scroll position
+    window.scrollTo(window.scrollX, window.scrollY);
+    isScrolling = false;
+  }
+});
