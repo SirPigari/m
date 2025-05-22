@@ -35,6 +35,9 @@ const loveNotes = [
     "meow",
     "mwaahh :3",
     "ur so cute!!",
+    "M <33",
+    "💝",
+    "🫶🏻🫶🏻🫶🏻",
 ];
 
 function getDailyNote() {
