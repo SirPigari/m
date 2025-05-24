@@ -184,6 +184,17 @@ body {
     100% { transform: translate(0); }
 }
 
+@keyframes flickerRotation {
+    0%, 100% { transform: rotate(+5deg); }
+    1% { transform: rotate(-48deg); }
+}
+
+.animate-h {
+    animation: flickerRotation 4s infinite steps(2, end);
+    transition: none;
+}
+
+
 .animate-tp {
   animation: randomTeleport 2s infinite;
 }
