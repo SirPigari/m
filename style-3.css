@@ -236,5 +236,10 @@ body {
   display: inline-block;
 }
 
+.glitch-text-block {
+  animation: glitchText 0.3s infinite;
+  display: block; /* stack like normal list items */
+}
+
 
 @media (max-width: 768px) {}
