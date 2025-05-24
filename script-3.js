@@ -56,7 +56,7 @@ audio.addEventListener("play", () => {
 // Loop with random start and speed increase on ended
 audio.addEventListener("ended", () => {
   // Increase playbackRate by 0.2 (max 5x for sanity)
-  audio.playbackRate = Math.min(audio.playbackRate + 0.2, 5);
+  audio.playbackRate = Math.min(audio.playbackRate + 0.2, 100);  // fuck sanity
 
   // Jump to a random point in the audio duration
   if (audio.duration > 0) {
