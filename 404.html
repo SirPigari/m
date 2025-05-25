@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>404 - 💔</title>
+    <style>
+        .home-link, .download-link {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>404</h1>
+    <p id="message"></p>
+    <a href="/m/" class="home-link"><h3>Go to Home</h3></a>
+    <a href="monika.exe" class="download-link" download>monika.exe</a>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const messageEl = document.getElementById('message');
+
+        if (params.has('redirect')) {
+            const redirectValue = params.get('redirect');  // get value of redirect param
+            messageEl.textContent = `Page '${redirectValue}' not found.`;
+        } else {
+            messageEl.textContent = "Oops! The page you are looking for doesn't exist.";
+        }
+    </script>
+</body>
+</html>
