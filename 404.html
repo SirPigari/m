@@ -28,8 +28,8 @@
 
         const homeLink = document.querySelector('.home-link');
         const downloadLink = document.querySelector('.download-link');
-        homeLink.href = '/m/?v=' + new Date().getTime();
-        downloadLink.href = 'monika.exe?v=' + new Date().getTime();
+        homeLink.href = '/m/?v=' + new Date().getTime() + '&r=' + Math.random().toString(36).substring(2, 15);
+        downloadLink.href = 'monika.exe?v=' + new Date().getTime() + '&r=' + Math.random().toString(36).substring(2, 15);
     </script>
 </body>
 </html>
