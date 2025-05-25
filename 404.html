@@ -20,11 +20,16 @@
         const messageEl = document.getElementById('message');
 
         if (params.has('redirect')) {
-            const redirectValue = params.get('redirect');  // get value of redirect param
+            const redirectValue = params.get('redirect');
             messageEl.textContent = `Page '${redirectValue}' not found.`;
         } else {
             messageEl.textContent = "Oops! The page you are looking for doesn't exist.";
         }
+
+        const homeLink = document.querySelector('.home-link');
+        const downloadLink = document.querySelector('.download-link');
+        homeLink.href = '/m/?v=' + new Date().getTime();
+        downloadLink.href = 'monika.exe?v=' + new Date().getTime();
     </script>
 </body>
 </html>
